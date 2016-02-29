@@ -34,10 +34,7 @@
                 $card = array_pop($deck);
                 //echo $card;
                 
-                $suitCheck = floor($card/13);
-                if($suitCheck == 4) {
-                    $suitCheck = 3;
-                }
+                $suitCheck = floor(($card-1)/13);
                 
                 $suit = array("clubs", "diamonds", "hearts", "spades");
                 $cardSuit = $suit[$suitCheck];
