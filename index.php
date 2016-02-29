@@ -32,6 +32,7 @@
             
             for ($j = 1; $j <= $numberOfCards; $j++) {
                 $card = array_pop($deck);
+                //echo $card;
                 
                 $suitCheck = floor($card/13);
                 if($suitCheck == 4) {
@@ -52,6 +53,43 @@
             $playerScores[$player] = $score;
             echo "<h3>" . $score . "</h3>";
         }
+        
+        // determine winner
+        $winningScore = 0;
+        $winner = 0;
+        for ($i = 1; $i <= 4; $i++) {
+            if ($playerScores[$i] > $winningScore && $playerScores[$i] <= 42) {
+                $winningScore = $playerScores[$i];
+                $winner = $i;
+            } else if ($playerScores[$i] == $winningScore) {
+                $winner = 5;
+            }
+        }
+        echo "<br><br>";
+        
+        // print winner
+        switch($winner) {
+            case 1:
+                echo "<h2>Mario wins!!</h2>";
+                break;
+            case 2:
+                echo "<h2>Wario wins!!</h2>";
+                break;
+            case 3:
+                echo "<h2>Luigi wins!!</h2>";
+                break;
+            case 4:
+                echo "<h2>Waluigi wins!!</h2>";
+                break;
+            case 5:
+                echo "<h2>It's a tie!!</h2>";
+                break;
+        }
     ?>
+        <div class="button">
+        <form action ="index.php" method="post">
+            <input class="continue" type="submit" name="choice" value="Play Again"></input><br>
+        </form>
+        </div>
 </body>
 </html>
