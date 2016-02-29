@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Silver Jack</title>
-    <link href="css/styles.css" type="text/css" rel="stylesheet" />
+    <link href="/styles.css" type="text/css" rel="stylesheet" />
     <?php
         $deck = array();
         $players = array();

@@ -1,0 +1,36 @@
+html {
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-family: arial;
+    text-align: center;
+    color: #555555;
+}
+
+.players {
+    width: 62px;
+    height: 62px;
+}
+
+h3 {
+    float: right;
+}
+
+.continue {
+    min-width: 200px;
+    margin: auto;
+    padding: 10px;
+    background-color: green;
+    color: black;
+    font-style: oblique;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button {
+    min-width: 200px;
+    margin: auto;
+    text-align: center;
+}
